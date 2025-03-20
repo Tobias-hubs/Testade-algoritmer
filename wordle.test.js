@@ -1,9 +1,9 @@
 import { controllGuess } from "./wordle.js";
 
-describe('controllGuess - Test of feedback results', () => {
+describe("controllGuess - Test of feedback results", () => {
 
     // Test that check that some letters are correct, some are misplaced and some are incorrect
-    test('should return correct feedback', () => { 
+    test("should return correct feedback", () => { 
     const result = controllGuess("CYKLA", "HALLÅ");
     expect(result).toEqual([
         {letter: "C", result: "incorrect"}, // Does not exist in "HALLÅ"
@@ -15,7 +15,7 @@ describe('controllGuess - Test of feedback results', () => {
 });
 
 // Test scenario where all letters are correct and in the right place
-test('should return correct feedback for a completely correct guess', () => {
+test("should return correct feedback for a completely correct guess", () => {
     const result = controllGuess("HALLÅ", "HALLÅ");
     expect(result).toEqual([
         {letter: "H", result: "correct"}, // Correct letter and placement
@@ -27,7 +27,7 @@ test('should return correct feedback for a completely correct guess', () => {
 });
 
 // Test when all letters are incorrect
-test('should return incorrect feedback when no letters are correct', () => {
+test("should return incorrect feedback when no letters are correct", () => {
     const result = controllGuess("ABCDE", "GÅ");
     expect(result).toEqual([  
         {letter: "A", result: "incorrect"}, // Does not exist in "GÅ"
