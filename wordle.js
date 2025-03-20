@@ -16,9 +16,9 @@
         if(feedback[i].result === null) {
             const letter = guess[i];
             if (correctWord.includes(letter)) {
-                feedback[i].result = 'missplaced';
+                feedback[i].result = "missplaced";
             } else {
-                feedback[i].result = 'incorrect';
+                feedback[i].result = "incorrect";
         }
     } 
     }   
