@@ -1,5 +1,5 @@
- 
- function controllGuess(guess, correctWord) { 
+
+ export function controllGuess(guess, correctWord) { 
     let feedback = [];
     
     for(let i = 0; i < guess.length; i++)  {
@@ -27,7 +27,6 @@
 
    
 }
-module.exports = { controllGuess };
 
 
 //  export function chooseWord(wordList, lenght, specialLetters)
